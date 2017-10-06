@@ -1,0 +1,8 @@
+{
+  "name": "Ionic3Dating",
+  "app_id": "af73243e",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

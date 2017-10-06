@@ -1,0 +1,40 @@
+<ion-content style="background: transparent;" padding>
+    <span style="padding: 20px;color: #7a7a7a;">Favourited you</span><ion-icon style="color: #7a7a7a;vertical-align: bottom;" name="arrow-forward"></ion-icon>
+    <hr>
+    <ion-grid style="padding:0px;margin-top: -20px;margin-bottom: 10px;">
+        <ion-scroll scrollX='true' style=" height: 130px;width: 100%;">
+            <ion-row style="padding: 5px;overflow: overlay;" nowrap>
+                <ion-col [ngClass]="animateClass" col-4 *ngFor=" let user of Users1" style="padding: 0px;color: #6c6c6c;text-align: center;">
+                    <ion-card style="margin: 0 auto;border: 2px solid #f53d3d; width: 73px;height: 73px;border-radius: 50%;">
+                        <img src="{{user.picture.large}}" />
+                    </ion-card>
+                    <span style="">{{user.name.first}}</span>
+                </ion-col>
+            </ion-row>
+        </ion-scroll>
+    </ion-grid>
+    <span style="padding: 20px;color: #7a7a7a;">Your favourites</span><ion-icon style="color: #7a7a7a;vertical-align: bottom;" name="arrow-forward"></ion-icon>
+    <hr>
+    <ion-grid style="padding:0px;margin-top: -20px;margin-bottom: 10px;">
+        <ion-scroll scrollX='true' style=" height: 130px;width: 100%;">
+            <ion-row style="padding: 0px;overflow: overlay;" nowrap>
+                <ion-col [ngClass]="animateClass" col-4 *ngFor=" let user of Users2" style="padding: 0px;color: #6c6c6c;text-align: center;">
+                    <ion-card style="margin: 0 auto;border: 2px solid #f53d3d; width: 73px;height: 73px;border-radius: 50%;">
+                        <img src="{{user.picture.large}}" />
+                    </ion-card>
+                    <span style="">{{user.name.first}}</span>
+                </ion-col>
+            </ion-row>
+        </ion-scroll>
+    </ion-grid>
+    <span style="padding: 20px;color: #7a7a7a;">Your friends</span>
+    <hr>
+    <ion-grid style="padding:0px;margin-top: -20px;">
+        <ion-row style="text-align: center;">
+            <span style="text-align: center;margin: 20px auto 0px auto;font-size: 14px;color: #828f97;font-family: sans-serif;">Find friends who are already on Ionic2 Dating or invite them to join.</span>
+        </ion-row>
+        <ion-row style="padding: 20px;">
+            <button ion-button full style="margin: 0 auto;text-transform: none;margin-bottom: 20px" round>Find friends</button>
+        </ion-row>
+    </ion-grid>
+</ion-content>

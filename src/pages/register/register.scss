@@ -1,0 +1,9 @@
+page-register {
+
+}
+.title{
+  text-align: center;
+  font-size: 38px; 
+}
+
+ion-input.required:after {content: "*"; color: red;}

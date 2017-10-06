@@ -1,0 +1,14 @@
+
+<ion-content style="background: url('https://s-media-cache-ak0.pinimg.com/236x/b3/1c/ce/b31cceccea15b00977c77fa7018345f9.jpg');">
+    <ion-fab left top>
+        <button ion-fab color="dark" menuToggle style="border: 2px solid #683f99;">
+            <ion-icon name="md-menu"></ion-icon>
+        </button>
+    </ion-fab>
+        <span class="pageHeader">Activity</span>
+    <ion-tabs mode="md" tabsPlacement='top' tabsHighlight=true style="margin-top: 70px;">
+        <ion-tab [root]="LikedYouPage" tabTitle="Liked You"></ion-tab>
+        <ion-tab [root]="VisitorsPage" tabTitle="Visitors"></ion-tab>
+        <ion-tab [root]="FavouritesPage" tabTitle="Favourites"></ion-tab>
+    </ion-tabs>
+</ion-content>

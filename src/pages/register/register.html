@@ -1,0 +1,49 @@
+<ion-content padding>
+    <button ion-button outline (click)="back()">
+  <ion-icon name="Back" backspace-outline></ion-icon>Back
+    </button>
+  <div class="title" >
+    Register
+  </div>
+  <form (submit)="doSignup()" name="myForm" novalidate>
+  
+    <img src="{{imgsource}}">
+  <button ion-button (click)="store()">Upload Image</button>
+  
+    
+    <ion-item>
+      <ion-input [(ngModel)]="regData.username" name="username" type="text" placeholder="Username" class="required" ></ion-input>
+    </ion-item>
+    <ion-item>
+     <ion-input [(ngModel)]="regData.password" name="password" type="password" placeholder="Password" class="required"></ion-input>
+    </ion-item>
+        <ion-item>
+        <ion-input [(ngModel)]="regData.email" name="email" type="text" placeholder="Email"></ion-input>
+    </ion-item>
+     <ion-item>
+      <ion-input [(ngModel)]="regData.country" name="country" type="text" placeholder="Country"></ion-input>
+    </ion-item>
+         <ion-item>
+      <ion-input [(ngModel)]="regData.phone" name="phone" type="text" placeholder="Contact"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="regData.age" name="age" type="number" placeholder="Age"></ion-input>
+    </ion-item>
+    <ion-item>
+  <ion-label>Gender</ion-label>
+  <ion-select [(ngModel)]="regData.gender" name="gender">
+    <ion-option value="f">Female</ion-option>
+    <ion-option value="m">Male</ion-option>
+  </ion-select>
+</ion-item>
+    <div class="padding">
+            <p ng-show="myForm.regData.username.$error.required">* Username is required</p>
+            <p ng-show="myForm.regData.username.$error.minlength">* Username must be longer than 5 characters</p>
+            <p ng-show="myForm.regData.password.$error.required">* Password is required</p>
+            <p ng-show="myForm.regData.password.$error.minlength">* Password must be longer than 6 characters</p>
+        </div>
+    <button ion-button block type="submit" ng-disabled="myForm.regData.$invalid" >
+      SignUp
+    </button>
+  </form>
+</ion-content>
